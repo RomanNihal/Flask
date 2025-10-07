@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} Filters Page {% endblock %}
+
+{% block content %}
+    <h1>Filters</h1>
+    <p>{{name|upper}}</p>
+    <p>{{name|lower}}</p>
+    <p>{{name|replace("o", "O")}}</p>
+    <p>{{name|reverse_string}}</p>
+    <p>{{name|repeat}}</p>
+    <p>{{name|repeat(5)}}</p>
+{% endblock %}
