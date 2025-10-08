@@ -8,12 +8,12 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route('/')
 def index():
-    return "Started flask"
+    return render_template("index.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
-        return render_template('login_file.html')
+        return render_template('forms_post_files.html')
     elif request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')

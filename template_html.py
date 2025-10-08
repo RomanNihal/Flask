@@ -2,17 +2,17 @@ from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__, template_folder="templates")
 
-@app.route('/test')
-def test():
-    return render_template("test.html")
-
 @app.route('/')
 def index():
+    return render_template("index.html")
+
+@app.route('/test')
+def test():
     myName = "Roman Nihal"
     myAge = 20+4
-    # return render_template("index.html", myName=myName, myAge=myAge)
+    # return render_template("test.html", myName=myName, myAge=myAge)
     myList = [11, 22, 33, 44, 55]
-    return render_template("index.html", list=myList)
+    return render_template("test.html", list=myList)
 
 @app.route('/filters')
 def filters():

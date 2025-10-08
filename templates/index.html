@@ -1,16 +1,6 @@
 {% extends "base.html" %}
-{% block title %} Index Page {% endblock %}
+{% block title %} Index {% endblock %}
 
 {% block content %}
-    <h1>hello</h1>
-    <!-- <p>{{myName}}</p>
-    <p>{{myAge}}</p> -->
-    <ul>
-        {% for item in list %}
-            <li {% if item > 40 %} style="color: red;" {% endif %}>{{item}}</li>
-        {% endfor %}
-    </ul>
-    <p>{{list}}</p>
-
-    <a href="{{ url_for('filters') }}">Filters</a>
+    <h1>Flask Practice</h1>
 {% endblock %}

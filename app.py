@@ -1,4 +1,4 @@
-from flask import Flask, request, make_response
+from flask import Flask, make_response, request
 
 app = Flask(__name__)
 
@@ -6,9 +6,9 @@ app = Flask(__name__)
 def index():
     return "Started flask"
 
-@app.route('/test')
-def test():
-    response = make_response("this is a test")
+@app.route('/response')
+def response():
+    response = make_response("this is a response")
     response.status_code = 202
     response.headers["content-type"] = "text/plain" 
     return response

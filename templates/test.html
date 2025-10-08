@@ -1,6 +1,16 @@
 {% extends "base.html" %}
-{% block title %} Test Page {% endblock %}
+{% block title %} Test {% endblock %}
 
 {% block content %}
-    <h1>this is a test</h1>
+    <h1>hello</h1>
+    <!-- <p>{{myName}}</p>
+    <p>{{myAge}}</p> -->
+    <ul>
+        {% for item in list %}
+            <li {% if item > 40 %} style="color: red;" {% endif %}>{{item}}</li>
+        {% endfor %}
+    </ul>
+    <p>{{list}}</p>
+
+    <a href="{{ url_for('filters') }}">Filters</a>
 {% endblock %}
